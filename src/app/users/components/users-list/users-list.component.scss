@@ -1,0 +1,15 @@
+table {
+  width: 100%;
+
+  .mat-row:hover {
+    background: #d1d1d1;
+    cursor: pointer;
+  }
+}
+
+.spinner-wrapper {
+  align-items: flex-start;
+  .mat-spinner {
+    margin-top: 10rem;
+  }
+}

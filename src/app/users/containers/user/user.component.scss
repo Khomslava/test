@@ -1,0 +1,23 @@
+.title {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  background-color: #4290e3;
+  color: #ffffff;
+}
+
+.content {
+  padding: 1rem 2rem;
+
+  .button-back {
+    margin: 1rem 0;
+    .mat-icon {
+      font-size: 2.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      line-height: 2.5rem;
+    }
+  }
+}

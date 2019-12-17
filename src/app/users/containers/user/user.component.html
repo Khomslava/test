@@ -1,0 +1,12 @@
+<div class="title">User details</div>
+
+<div class="content">
+  <button mat-icon-button class="button-back" color="primary" (click)="navigateToUsersList()" matTooltip="Back to user list"
+    matTooltipPosition="above">
+    <mat-icon class="md-light">
+       arrow_back
+    </mat-icon>
+  </button>
+
+  <app-user-details [user]="user$ | async"></app-user-details>
+</div>

@@ -1,0 +1,7 @@
+<div class="title">Users list</div>
+
+<app-users-list
+  [users]="users$ | async"
+  [isLoading]="usersLoading$ | async"
+  (selectedUser)="selectUser($event)">
+</app-users-list>

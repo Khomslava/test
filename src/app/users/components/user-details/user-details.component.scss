@@ -1,0 +1,10 @@
+  .user-form {
+    display: flex;
+    flex-direction: column;
+
+    .row {
+      max-width: 50%;
+      min-width: 20rem;
+      margin-bottom: 0.5rem;
+    }
+  }
