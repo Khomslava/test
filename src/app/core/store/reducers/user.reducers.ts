@@ -10,15 +10,13 @@ export const initialState = initialUserState();
 
 const reducer = createReducer(
   initialState,
-  on(UserActions.getUsers, (state: UserState) => {
-    return { ...state, loading: true, loaded: false };
-  }),
   on(UserActions.getUsersSuccess, (state: UserState, { users }) => {
-    return { ...state, users, loading: false, loaded: true};
+    return { ...state, users, loaded: true};
   }),
   on(UserActions.getUsersFail, (state: UserState) => {
-    return { ...state, loading: false, loaded: false };
+    return { ...state, loaded: false };
   }),
+  on(UserActions.getUserFail, (state: UserState) => state),
   on(UserActions.selectUser, (state: UserState, { user }) => {
     return { ...state, selectedUser: user };
   })

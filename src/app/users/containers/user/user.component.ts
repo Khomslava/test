@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -17,16 +17,19 @@ import { IUser } from './../../../core/models/user.model';
 })
 export class UserComponent {
   user$: Observable<IUser>;
+  userId: number;
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private store: Store<UserState>
   ) {
+    this.userId = this.route.snapshot.params.id;
     this.user$ = store.pipe(
       select(selectSelectedUser),
       tap((user: IUser) => {
         if (!user) {
-          this.navigateToUsersList();
+          this.store.dispatch(UserActions.getUser({ id: +this.userId }));
         }
       })
     );

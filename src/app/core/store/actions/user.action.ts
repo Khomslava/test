@@ -6,6 +6,9 @@ export enum EUserActions {
   GetUsers = '[User] Get Users',
   GetUsersSuccess = '[User] Get Users Success',
   GetUsersFail = '[User] Get Users Fail',
+  GetUser = '[User] Get User',
+  GetUserSuccess = '[User] Get User Success',
+  GetUserFail = '[User] Get User Fail',
   SelectUser = '[User] Selected Users'
 }
 
@@ -20,6 +23,15 @@ export const getUsersSuccess = createAction(
 
 export const getUsersFail = createAction(
   EUserActions.GetUsersFail
+);
+
+export const getUser = createAction(
+  EUserActions.GetUser,
+  props<{ id: number }>()
+);
+
+export const getUserFail = createAction(
+  EUserActions.GetUserFail
 );
 
 export const selectUser = createAction(

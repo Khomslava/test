@@ -11,9 +11,9 @@ export const selectUserList = createSelector(
   (state: UserState) => state.users
 );
 
-export const selectUsersLoading = createSelector(
+export const selectUsersLoaded = createSelector(
   selectUsers,
-  (state: UserState) => state.loading
+  (state: UserState) => state.loaded
 );
 
 export const selectSelectedUser = createSelector(

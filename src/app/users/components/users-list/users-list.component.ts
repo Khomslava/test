@@ -15,7 +15,6 @@ export class UsersListComponent implements OnInit, OnChanges {
   displayedColumns: string[] = ['name', 'email'];
   dataSource: MatTableDataSource<any>;
 
-  @Input() isLoading: boolean;
   @Input() users: IUser[];
   @Output() selectedUser = new EventEmitter<IUser>();
 

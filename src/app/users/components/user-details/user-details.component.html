@@ -15,3 +15,8 @@
     <input matInput formControlName="company" placeholder="Company" />
   </mat-form-field>
 </form>
+
+
+  <div class="spinner-wrapper" *ngIf="!user">
+    <mat-spinner diameter="75"></mat-spinner>
+  </div>
